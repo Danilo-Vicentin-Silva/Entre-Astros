@@ -1,0 +1,219 @@
+/* --- ESTILOS GERAIS E RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000010;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffa500;
+    text-shadow: 0 0 5px #ffa500;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- PÁGINA PRINCIPAL: SISTEMA SOLAR ANIMADO --- */
+
+.sistema-solar {
+    position: relative;
+    width: 80vmin; /* Usa a menor dimensão da tela para ser responsivo */
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sol {
+    width: 12vmin;
+    height: 12vmin;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 0 0 60px #ff6600, 0 0 90px #ffcc00;
+    position: absolute;
+    z-index: 10;
+}
+
+.orbita {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: girar linear infinite;
+}
+
+.planeta {
+    position: absolute;
+    top: 50%;
+    left: -1.5vmin; /* Metade do tamanho do planeta para centralizar na órbita */
+    width: 3vmin;
+    height: 3vmin;
+    background-color: #ccc;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.planeta:hover {
+    transform: translateY(-50%) scale(1.8);
+    box-shadow: 0 0 20px #fff;
+}
+
+/* Tamanhos e velocidades de cada órbita/planeta */
+.mercurio-orbita { width: 18vmin; height: 18vmin; animation-duration: 8.8s; }
+.mercurio { width: 1.5vmin; height: 1.5vmin; background-color: #a9a9a9; left: -0.75vmin; }
+
+.venus-orbita { width: 26vmin; height: 26vmin; animation-duration: 22.5s; }
+.venus { width: 2.5vmin; height: 2.5vmin; background-color: #e6d3a2; left: -1.25vmin; }
+
+.terra-orbita { width: 36vmin; height: 36vmin; animation-duration: 36.5s; }
+.terra { width: 2.7vmin; height: 2.7vmin; background-color: #4f86f7; left: -1.35vmin; }
+
+.marte-orbita { width: 48vmin; height: 48vmin; animation-duration: 68.7s; }
+.marte { width: 2vmin; height: 2vmin; background-color: #c1440e; left: -1vmin; }
+
+.jupiter-orbita { width: 62vmin; height: 62vmin; animation-duration: 120s; }
+.jupiter { width: 5vmin; height: 5vmin; background-color: #d8ca9d; left: -2.5vmin; }
+
+.saturno-orbita { width: 75vmin; height: 75vmin; animation-duration: 290s; }
+.saturno { width: 4.5vmin; height: 4.5vmin; background-color: #f0e5c1; left: -2.25vmin; border: 0.4vmin solid rgba(255, 255, 255, 0.5); border-radius: 50%; }
+
+.urano-orbita { width: 86vmin; height: 86vmin; animation-duration: 420s; }
+.urano { width: 3.5vmin; height: 3.5vmin; background-color: #b0e0e6; left: -1.75vmin; }
+
+.netuno-orbita { width: 96vmin; height: 96vmin; animation-duration: 600s; }
+.netuno { width: 3.4vmin; height: 3.4vmin; background-color: #3f54ba; left: -1.7vmin; }
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- PÁGINAS DE DETALHE DOS PLANETAS --- */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    background-color: rgba(10, 10, 20, 0.5);
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 5px 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: #ffa500;
+    text-shadow: 0 0 5px #ffa500;
+}
+
+.container-planeta {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(20, 20, 30, 0.7);
+    border-radius: 10px;
+    border: 1px solid #ffa500;
+}
+
+.planeta-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.planeta-info img {
+    width: 200px;
+    height: 200px;
+    animation: rotacao-lenta 40s linear infinite;
+}
+
+.planeta-texto p {
+    line-height: 1.6;
+}
+
+.dados {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.curiosidades, .tabela-dados {
+    flex: 1;
+}
+
+.curiosidades ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.curiosidades li {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 3px solid #ffa500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+th {
+    background-color: #ffa500;
+    color: #000;
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rotacao-lenta {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .planeta-info, .dados {
+        flex-direction: column;
+    }
+    .planeta-info img {
+        width: 150px;
+        height: 150px;
+    }
+}
