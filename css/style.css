@@ -69,71 +69,81 @@ main {
     left: -1.5vmin; 
     width: 3vmin;
     height: 3vmin;
-    background-color: #ccc;
+    background-color: #cccccc00;
     border-radius: 50%;
     transform: translateY(-50%);
     transition: transform 0.3s ease;
+    animation: spin-eixo 25s linear infinite;
 }
 
 .planeta:hover {
     transform: translateY(-50%) scale(1.8);
-    box-shadow: 0 0 20px #fff;
+    box-shadow: 0 0 35px #ffffff;
 }
 
 .mercurio-orbita { width: 18vmin; height: 18vmin; animation-duration: 8.8s; z-index: 8; }
 .planeta.mercurio { 
-    width: 2vmin; height: 2vmin; left: -1vmin;
-    background-image: url('image/mercurio.jpg');
+    width: 2.4vmin; height: 2.4vmin; left: -1.2vmin; /* Aumentado */
+    background-image: url('../image/mercurio.png');
     background-size: cover;
 }
 
 .venus-orbita { width: 26vmin; height: 26vmin; animation-duration: 22.5s; z-index: 7; }
 .planeta.venus { 
-    width: 2.5vmin; height: 2.5vmin; left: -1.25vmin;
-    background-image: url('image/venus.jpg');
+    width: 3vmin; height: 3vmin; left: -1.5vmin; /* Aumentado */
+    background-image: url('../image/venus.png');
     background-size: cover;
 }
 
 .terra-orbita { width: 36vmin; height: 36vmin; animation-duration: 36.5s; z-index: 6; }
 .planeta.terra { 
-    width: 2.7vmin; height: 2.7vmin; left: -1.35vmin;
-    background-image: url('image/terra.jpg');
+    width: 3.2vmin; height: 3.2vmin; left: -1.6vmin; /* Aumentado */
+    background-image: url('../image/terra.png');
     background-size: cover;
 }
 
 .marte-orbita { width: 48vmin; height: 48vmin; animation-duration: 68.7s; z-index: 5; }
 .planeta.marte { 
-    width: 2.2vmin; height: 2.2vmin; left: -1.1vmin;
-    background-image: url('image/marte.jpg');
+    width: 2.6vmin; height: 2.6vmin; left: -1.3vmin; /* Aumentado */
+    background-image: url('../image/marte.png');
     background-size: cover;
 }
 
 .jupiter-orbita { width: 62vmin; height: 62vmin; animation-duration: 120s; z-index: 4; }
 .planeta.jupiter { 
-    width: 5vmin; height: 5vmin; left: -2.5vmin;
-    background-image: url('image/jupiter.jpg');
+    width: 6vmin; height: 6vmin; left: -3vmin; /* Aumentado */
+    background-image: url('../image/jupiter.png');
     background-size: cover;
 }
 
 .saturno-orbita { width: 75vmin; height: 75vmin; animation-duration: 290s; z-index: 3; }
 .planeta.saturno { 
-    width: 4.5vmin; height: 4.5vmin; left: -2.25vmin;
-    background-image: url('image/saturno.jpg'); 
+    width: 5.4vmin; height: 5.4vmin; left: -2.7vmin; 
+    background-image: url('../image/saturno.png'); 
     background-size: cover;
 }
 
 .urano-orbita { width: 86vmin; height: 86vmin; animation-duration: 420s; z-index: 2; }
 .planeta.urano { 
-    width: 3.5vmin; height: 3.5vmin; left: -1.75vmin;
-    background-image: url('image/urano.jpg');
+    width: 4.2vmin; height: 4.2vmin; left: -2.1vmin; 
+    background-image: url('../image/urano.png');
     background-size: cover;
 }
 
 .netuno-orbita { width: 96vmin; height: 96vmin; animation-duration: 600s; z-index: 1; }
 .planeta.netuno { 
-    width: 3.4vmin; height: 3.4vmin; left: -1.7vmin;
-    background-image: url('image/netuno.jpg');
+    width: 4vmin; height: 4vmin; left: -2vmin;
+    background-image: url('../image/netuno.png');
     background-size: cover;
+}
+
+@keyframes spin-eixo {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 @keyframes girar {
