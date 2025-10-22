@@ -34,24 +34,7 @@ HTML5: Para a estrutura semântica do site.
 
 CSS3: Para toda a estilização, animações (@keyframes, transform), layout (Flexbox) e responsividade (Media Queries, unidades rem e vmin).
 
-📂 Estrutura do Projeto
-projeto-sistema-solar/
-│
-├── index.html          (Página inicial com as órbitas)
-├── css/
-│   └── style.css       (Folha de estilo única para todo o site)
-│
-├── image/
-│   ├── terra.jpg
-│   ├── mercurio.jpg
-│   └── ... (etc.)      (Imagens dos planetas)
-│
-├── paginas/
-│   ├── terra.html
-│   ├── mercurio.html
-│   └── ... (etc.)      (8 páginas de detalhes dos planetas)
-│
-└── README.md           (Este arquivo)
+
 👥 Integrantes do Grupo
 Aqui vocês devem listar os membros do grupo.
 
