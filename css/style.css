@@ -83,56 +83,56 @@ main {
 .mercurio-orbita { width: 18vmin; height: 18vmin; animation-duration: 8.8s; z-index: 8; }
 .planeta.mercurio { 
     width: 2vmin; height: 2vmin; left: -1vmin;
-    background-image: url('../image/mercurio.jpg');
+    background-image: url('image/mercurio.jpg');
     background-size: cover;
 }
 
 .venus-orbita { width: 26vmin; height: 26vmin; animation-duration: 22.5s; z-index: 7; }
 .planeta.venus { 
     width: 2.5vmin; height: 2.5vmin; left: -1.25vmin;
-    background-image: url('../image/venus.jpg');
+    background-image: url('image/venus.jpg');
     background-size: cover;
 }
 
 .terra-orbita { width: 36vmin; height: 36vmin; animation-duration: 36.5s; z-index: 6; }
 .planeta.terra { 
     width: 2.7vmin; height: 2.7vmin; left: -1.35vmin;
-    background-image: url('../image/terra.jpg');
+    background-image: url('image/terra.jpg');
     background-size: cover;
 }
 
 .marte-orbita { width: 48vmin; height: 48vmin; animation-duration: 68.7s; z-index: 5; }
 .planeta.marte { 
     width: 2.2vmin; height: 2.2vmin; left: -1.1vmin;
-    background-image: url('../image/marte.jpg');
+    background-image: url('image/marte.jpg');
     background-size: cover;
 }
 
 .jupiter-orbita { width: 62vmin; height: 62vmin; animation-duration: 120s; z-index: 4; }
 .planeta.jupiter { 
     width: 5vmin; height: 5vmin; left: -2.5vmin;
-    background-image: url('../image/jupiter.jpg');
+    background-image: url('image/jupiter.jpg');
     background-size: cover;
 }
 
 .saturno-orbita { width: 75vmin; height: 75vmin; animation-duration: 290s; z-index: 3; }
 .planeta.saturno { 
     width: 4.5vmin; height: 4.5vmin; left: -2.25vmin;
-    background-image: url('../image/saturno.jpg'); 
+    background-image: url('image/saturno.jpg'); 
     background-size: cover;
 }
 
 .urano-orbita { width: 86vmin; height: 86vmin; animation-duration: 420s; z-index: 2; }
 .planeta.urano { 
     width: 3.5vmin; height: 3.5vmin; left: -1.75vmin;
-    background-image: url('../image/urano.jpg');
+    background-image: url('image/urano.jpg');
     background-size: cover;
 }
 
 .netuno-orbita { width: 96vmin; height: 96vmin; animation-duration: 600s; z-index: 1; }
 .planeta.netuno { 
     width: 3.4vmin; height: 3.4vmin; left: -1.7vmin;
-    background-image: url('../image/netuno.jpg');
+    background-image: url('image/netuno.jpg');
     background-size: cover;
 }
 
